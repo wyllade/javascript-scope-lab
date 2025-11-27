@@ -17,11 +17,5 @@ function addBurger() {
 function changeFeaturedDrink() {
   featuredDrink = 'The JavaShake';
 }
-// Step 4: Invoking Functions
-addBurger();
-changeFeaturedDrink();
 
-// Step 5: Output
-console.log('Burgers:', burgers);
-console.log('Featured Drink:', featuredDrink);
 
