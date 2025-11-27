@@ -1,35 +1,32 @@
-// Write your solution in this file!
-
 // Step 1: Variable Data (Global Scope)
-let burgers = ['Hamburger', 'Cheeseburger'];
+const burgers = ['Hamburger', 'Cheeseburger'];
 let featuredDrink = 'Strawberry Milkshake';
 
 // Step 2: Function and Block
 function addBurger() {
     // Function-scoped variable
-    let newBurger = 'Flatburger';
+    const newBurger = 'Flatburger';
     
     // Add to the burgers array
     burgers.push(newBurger);
 
     // Block-scoped variables inside an if block
     if (true) {
-        let anotherNewBurger = 'Maple Bacon Burger';
+        const anotherNewBurger = 'Maple Bacon Burger';
         burgers.push(anotherNewBurger);
-
-        // Function to change the featured drink
-        function changeFeaturedDrink() {
-            featuredDrink = 'The JavaShake';
-        }
-
-        // Optional: call the function here if you want to immediately update
-        // changeFeaturedDrink();
     }
 }
 
-// Example usage
-addBurger();
-console.log(burgers); // ['Hamburger', 'Cheeseburger', 'Flatburger', 'Maple Bacon Burger']
-console.log(featuredDrink); // 'Strawberry Milkshake'
+// Step 3: Function to change featured drink
+function changeFeaturedDrink() {
+    featuredDrink = 'The JavaShake';
+}
 
-// If you want to change the drink, call the inner function outside (requires refactor to return it)
+// Example usage (optional, just for console testing)
+console.log('Before addBurger:', burgers); // ['Hamburger', 'Cheeseburger']
+addBurger();
+console.log('After addBurger:', burgers); // ['Hamburger', 'Cheeseburger', 'Flatburger', 'Maple Bacon Burger']
+console.log('Featured drink before change:', featuredDrink); // 'Strawberry Milkshake'
+changeFeaturedDrink();
+console.log('Featured drink after change:', featuredDrink); // 'The JavaShake'
+
