@@ -20,13 +20,5 @@ function addBurger() {
 // Step 3: Function to change featured drink
 function changeFeaturedDrink() {
     featuredDrink = 'The JavaShake';
+    
 }
-
-// Example usage (optional, just for console testing)
-console.log('Before addBurger:', burgers); // ['Hamburger', 'Cheeseburger']
-addBurger();
-console.log('After addBurger:', burgers); // ['Hamburger', 'Cheeseburger', 'Flatburger', 'Maple Bacon Burger']
-console.log('Featured drink before change:', featuredDrink); // 'Strawberry Milkshake'
-changeFeaturedDrink();
-console.log('Featured drink after change:', featuredDrink); // 'The JavaShake'
-
